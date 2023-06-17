@@ -48,12 +48,12 @@ ENV PATH=~/.local/bin:$PATH
 # Adds local templates directory and contents in /usr/local/terrafrom-templates
 #ADD templates /usr/local/bin/templates
 #RUN mkdir ~/.aws
-COPY ./backend.tf /
-COPY ./main.tf /
-COPY ./id_rsa.pub /
-COPY ./user_data.sh /
+COPY backend.tf .
+COPY main.tf .
+COPY id_rsa.pub .
+COPY user_data.sh .
 
-COPY ./deploy.sh /
+COPY deploy.sh .
 
 ARG aws_access_key_id
 ARG aws_secret_access_key
